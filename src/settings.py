@@ -1,0 +1,1 @@
+fuctions_save_folder = 'data/functions'
