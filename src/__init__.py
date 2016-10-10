@@ -3,8 +3,10 @@ import tornado.web
 
 from . import views
 from . import models
+from . import settings
 
-app = tornado.web.Application(views.routes, cookie_secret="42")
+
+app = tornado.web.Application(views.routes, **settings.app_settings)
 
 def run():
     app.listen(8888)

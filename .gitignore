@@ -2,3 +2,4 @@ AdAnalytics.egg-info/
 build/
 dist/
 setup.cfg
+*__pycache__*
