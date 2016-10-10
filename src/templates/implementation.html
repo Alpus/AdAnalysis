@@ -3,18 +3,18 @@
 {% block content %}
 	<div class="container-fluid">
 		<ul class="nav nav-pills" data-tabs="tabs">
-		  <li class="active"> <a data-toggle="tab" href="#distribution">Distribution</a> </li>
-		  <li> <a data-toggle="tab" href="#plan">Profile</a> </li>
-		  <li> <a data-toggle="tab" href="#correction">Correction</a> </li>
-		  <li> <a data-toggle="tab" href="#traffic">Trafic</a> </li>
-		  <li> <a data-toggle="tab" href="#result">Result</a> </li>
+		  <li class="active" id="distribution"> <a data-toggle="tab" href="#distribution">Distribution</a> </li>
+		  <li class="disabled" id="plan"> <a href="#plan">Plan</a> </li>
+		  <li class="disabled" id="correction"> <a href="#correction">Correction</a> </li>
+		  <li class="disabled" id="traffic"> <a href="#traffic">Trafic</a> </li>
+		  <li class="disabled" id="result"> <a href="#result">Result</a> </li>
 		</ul>
 		<div class="tab-content">
 			<div class="container-fluid tab-pane top-margin active" id="distribution">
 				<form>
 					<label for="p-func">Function: p(w)</label>
 					<input type="text" class="form-control" id="p-func" value="6w*(1 - w)">
-					<input type="submit" value="Save" class="btn btn-default pull-right">
+					<input  type="submit" id="distribution" value="Save" class="btn btn-default pull-right">
 				  <canvas id="p-func-plot" width="800" height="500"></canvas>
 				</form>
 			</div>
@@ -22,7 +22,7 @@
 				<form>
 					<label for="S-func">Function: S(t)</label>
 					<input type="text" class="form-control" id="S-func" value="3t + sin(t)">
-					<input type="submit" value="Save" class="btn btn-default pull-right">
+					<input type="submit" id="plan" value="Save" class="btn btn-default pull-right">
 				  <canvas id="S-func-plot" width="800" height="500"></canvas>
 				</form>
 			</div>
@@ -32,7 +32,7 @@
 				<form>
 					<label for="z-func">Function: z(t)</label>
 					<input type="text" class="form-control" id="z-func" value="4t + cos(t)">
-					<input type="submit" value="Save" class="btn btn-default pull-right">
+					<input type="submit" id="traffic" value="Save" class="btn btn-default pull-right">
 				  <canvas id="z-func-plot" width="800" height="500"></canvas>
 				</form>
 			</div>
