@@ -13,4 +13,5 @@ setup(
             'test_all = src.tests:test_all',
         ],
     },
+    package_data={'src': ['data/functions/empty.txt']}
 )

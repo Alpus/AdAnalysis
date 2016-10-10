@@ -4,7 +4,7 @@ import tornado.web
 from . import views
 from . import models
 
-app = tornado.web.Application(routes, cookie_secret="42")
+app = tornado.web.Application(views.routes, cookie_secret="42")
 
 def run():
     app.listen(8888)

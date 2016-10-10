@@ -1,6 +1,5 @@
-import functions_tests
+from .functions_tests import test_function
 
 
 def test_all():
-	for func in functions_tests:
-		func()
+	test_function()
