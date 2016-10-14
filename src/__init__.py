@@ -2,7 +2,7 @@ import tornado.ioloop
 import tornado.web
 
 from . import views
-from . import models
+from .logic import functions
 from . import settings
 
 
