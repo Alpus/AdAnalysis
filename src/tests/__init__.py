@@ -1,3 +1,4 @@
+#!/usr/local/bin/python3
 from .function_tests import test_function
 from .usecases import usecase1, usecase2, usecase3
 
