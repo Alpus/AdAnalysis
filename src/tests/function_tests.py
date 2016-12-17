@@ -11,3 +11,5 @@ def test_function():
 		print(function.save_to_file('test2'))
 		print(function.file)
 		print(function.delete_from_file())
+
+		print(function.interpolate(2000))

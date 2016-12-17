@@ -11,8 +11,9 @@ def test_sample(sample_linear_system, correct_answer):
 
     print('Real answer:', answer, sep='\n')
 
-    if correct_answer != answer:
-        raise ValueError('Answer is not correct')
+    for f, s in zip(correct_answer, answer):
+        if abs(f - s) > 1e-5:
+            raise ValueError('Answer is not correct')
     else:
         print('Answer is correct!\n')
 
@@ -38,3 +39,14 @@ def test_solver():
     )
     correct_answer_2 = [-4, 0.5, 1, 2]
     test_sample(sample_linear_system_2, correct_answer_2)
+
+    sample_linear_system_3 = np.array(
+        [
+            [2, 1, 0, 0, 6],
+            [1, 2, 1, 0, 3],
+            [0, 1, 5, -2, 11],
+            [0, 0, -2, 7, 1],
+        ]
+    )
+    correct_answer_3 = [4, -2, 3, 1]
+    test_sample(sample_linear_system_3, correct_answer_3)
